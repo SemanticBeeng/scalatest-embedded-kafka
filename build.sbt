@@ -78,6 +78,6 @@ lazy val kafkaStreams = (project in file("kafka-streams"))
   .settings(commonLibrarySettings)
   .settings(releaseSettings: _*)
   .settings(libraryDependencies ++= Seq(
-    "org.apache.kafka" % "kafka-streams" % kafkaVersion exclude (slf4jLog4jOrg, slf4jLog4jArtifact)
+    "com.typesafe.akka" %% "akka-stream-kafka" % "0.13" exclude (slf4jLog4jOrg, slf4jLog4jArtifact)
   ))
   .dependsOn(embeddedKafka)
